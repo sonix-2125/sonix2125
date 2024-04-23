@@ -1,0 +1,19 @@
+#line_remover{
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+#bold_text{
+ 
+font-size: xx-large;
+font-weight: bolder;
+}
+
+#upper_case{
+    text-transform: uppercase;
+}
+h4{
+    color: aqua;
+}
+
+.carousel-img { height: 334.6px; /* Fixed height */ object-fit: cover; /* Cover entire area */ }

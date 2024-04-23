@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Accessing Webcam</title>
+    <style>
+        #vid {
+            width: 1300px; /* Adjust width as needed */
+            height: 800px; /* Adjust height as needed */
+            border: solid 2px black;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div>
+            <video id="vid" controls autoplay></video>
+        </div>
+   
+        <script>
+            var video = document.getElementById("vid");
+            const constraints = {
+                video: {
+                    width: { ideal: 1280 },
+                    height: { ideal: 720 }
+                }
+            };
+            navigator.mediaDevices.getUserMedia({ video: constraints })
+                .then(function(stream) {
+                    video.srcObject = stream;
+                })
+                .catch((error) => {
+                    alert("Unable to play");
+                });
+        </script>
+    </div>
+</body>
+</html>
